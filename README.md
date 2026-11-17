@@ -26,3 +26,5 @@ Economic census for business activity- Statistics Bureau of Japan
 3. Commit the change: `git commit -m "Describe the change "`
 4. Push the commit to main: `git push`
     - for the first push of a new branch: `git push -u origin <branch-name>`
+
+commit regularly with each commit representing one logical change 
