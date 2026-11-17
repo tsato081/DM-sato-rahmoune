@@ -18,3 +18,11 @@ Economic census for business activity- Statistics Bureau of Japan
 - Official census website and methodology
 
 - Table 6-1: Establishments and persons engaged by industry, at municipality level
+
+
+## git commands
+1. Before working: `git pull`
+2. Stage a changed file: `git add <filename>`
+3. Commit the change: `git commit -m "Describe the change "`
+4. Push the commit to main: `git push`
+    - for the first push of a new branch: `git push -u origin <branch-name>`
