@@ -48,3 +48,7 @@ economic census outline, terms, notes and industry classification (https://www.s
     - for the first push of a new branch: `git push -u origin <branch-name>`
 
 commit regularly with each commit representing one logical change 
+
+
+## AI Usage
+- The raw data files in `data/raw/` and the methodology documents in `docs/` were retrieved from e-Stat and the Statistics Bureau of Japan website using Claude in Chrome.
