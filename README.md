@@ -36,7 +36,8 @@ The Excel files are published in Japanese only. Each file can be re-downloaded w
 | `data/raw/frame2024_t4-1b.xlsx` | 2024 Economic Census for Business Frame | 4-1B Persons engaged by industry (minor groups) – municipalities (excl. sole proprietors without employees) | 000040389325 |
 
 Methodology documents (English, Statistics Bureau of Japan) are in `docs/`:
-census outline and definitions (https://www.stat.go.jp/english/data/kokusei/2020/),
+census outline and definitions (https://www.stat.go.jp/english/data/kokusei/2020/; the Statistics Bureau
+also links these 2020 documents for the 2025 census, which has only its own questionnaire in English),
 economic census outline, terms, notes and industry classification (https://www.stat.go.jp/english/data/e-census/2021/).
 
 
