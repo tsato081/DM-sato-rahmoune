@@ -35,10 +35,26 @@ The Excel files are published in Japanese only. Each file can be re-downloaded w
 | `data/raw/frame2024_t4-1a.xlsx` | 2024 Economic Census for Business Frame | 4-1A Privately owned establishments by industry (minor groups) – municipalities (excl. sole proprietors without employees) | 000040389324 |
 | `data/raw/frame2024_t4-1b.xlsx` | 2024 Economic Census for Business Frame | 4-1B Persons engaged by industry (minor groups) – municipalities (excl. sole proprietors without employees) | 000040389325 |
 
-Methodology documents (English, Statistics Bureau of Japan) are in `docs/`:
-census outline and definitions (https://www.stat.go.jp/english/data/kokusei/2020/; the Statistics Bureau
-also links these 2020 documents for the 2025 census, which has only its own questionnaire in English),
-economic census outline, terms, notes and industry classification (https://www.stat.go.jp/english/data/e-census/2021/).
+### Methodology documents
+
+English documents from the Statistics Bureau of Japan, stored in `docs/` without modification.
+For the 2025 Population Census, the Statistics Bureau links the 2020 outline and explanation of terms;
+only the questionnaire is specific to 2025.
+
+| File | Content | Source |
+|---|---|---|
+| `docs/census2020_outline.pdf` | 2020 Population Census – outline of the survey | https://www.stat.go.jp/english/data/kokusei/2020/pdf/outline.pdf |
+| `docs/census2020_terms.pdf` | 2020 Population Census – explanation of terms | https://www.stat.go.jp/english/data/kokusei/2020/pdf/exp.pdf |
+| `docs/census2025_questionnaire.pdf` | 2025 Population Census – questionnaire | https://www.stat.go.jp/english/data/kokusei/2025/pdf/qre.pdf |
+| `docs/ecensus2021_outline.pdf` | 2021 Economic Census for Business Activity – outline | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_gaikyoe.pdf |
+| `docs/ecensus2021_terms.pdf` | 2021 Economic Census for Business Activity – explanation of terms | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_term.pdf |
+| `docs/ecensus2021_notes.pdf` | 2021 Economic Census for Business Activity – notes on the statistical tables | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_note.pdf |
+| `docs/ecensus2021_categories.pdf` | 2021 Economic Census for Business Activity – items of category used in the tables | https://www.stat.go.jp/english/data/e-census/2021/pdf/bunruie.pdf |
+| `docs/ecensus2021_classification.xlsx` | 2021 Economic Census for Business Activity – industrial classification (English names of all industry codes in table 6-1) | https://www.stat.go.jp/english/data/e-census/2021/zuhyou/r3classification.xlsx |
+| `docs/frame2024_outline.pdf` | 2024 Economic Census for Business Frame – outline | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_gaiyou_e.pdf |
+| `docs/frame2024_terms.pdf` | 2024 Economic Census for Business Frame – explanation of terms | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_yougo_e.pdf |
+| `docs/frame2024_notes.pdf` | 2024 Economic Census for Business Frame – notes on the statistical tables | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_riyou_e.pdf |
+| `docs/frame2024_classification.pdf` | 2024 Economic Census for Business Frame – industrial classification, JSIC Rev. 14 (English names of all industry codes in tables 4-1A/4-1B) | https://www.stat.go.jp/english/data/e-census/2024/pdf/sangyou_e.pdf |
 
 
 ## git commands
