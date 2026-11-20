@@ -56,8 +56,6 @@ English table titles on e-Stat (the English list pages of each survey):
 | Business frame 4-1A | Privately Owned Establishments by Industry Groups (Excluding Individual Proprietorships with No Employees) - Japan, Prefectures and Municipalities | [2024](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200552&tstat=000001223942&cycle=0&tclass1=000001223947&tclass2=000001223949&tclass3=000001223953&tclass4val=0) |
 | Business frame 4-1B | Persons Engaged by Industry Groups (Excluding Individual Proprietorships with No Employees) - Japan, Prefectures and Municipalities | same as above |
 
-Where no official English term exists, the translation is ours; this is marked "own translation" below.
-
 ## Columns common to several files
 
 ### Area identification code (地域識別コード) → `area_type`
@@ -128,14 +126,14 @@ Value columns (same in both tables):
 |---|---|---|---|
 | 人口 / 00_総数 | `pop_total` | persons | e-Stat title: "Population" |
 | 人口 / 01_0～4歳 … 20_95～99歳 | `pop_0_4` … `pop_95_99` | persons | e-Stat title: "Age (five-year groups)" |
-| 人口 / 21_100歳以上 | `pop_100plus` | persons | own translation |
+| 人口 / 21_100歳以上 | `pop_100plus` | persons | same |
 | 人口 / 22_年齢「不詳」 | `pop_age_not_reported` | persons | census2020_terms.pdf p.6: "Age not reported" |
 | 人口 / R1_（再掲）15歳未満 | `pop_under15` | persons | e-Stat title: "Age (… 3 groups)"; 再掲 = subtotal repeated from the groups above |
 | 人口 / R2_（再掲）15～64歳 | `pop_15_64` | persons | same |
 | 人口 / R3_（再掲）65歳以上 | `pop_65plus` | persons | same |
-| 人口 / R4_（再掲）75歳以上 | `pop_75plus` | persons | own translation |
-| 人口 / R5_（再掲）85歳以上 | `pop_85plus` | persons | own translation |
-| 人口 / R6_（再掲）20～69歳 | `pop_20_69` | persons | own translation |
+| 人口 / R4_（再掲）75歳以上 | `pop_75plus` | persons | same |
+| 人口 / R5_（再掲）85歳以上 | `pop_85plus` | persons | same |
+| 人口 / R6_（再掲）20～69歳 | `pop_20_69` | persons | same |
 | 人口構成比［年齢別］ / 1_15歳未満, 2_15～64歳, 3_65歳以上 | `ratio_under15`, `ratio_15_64`, `ratio_65plus` | % | e-Stat title: "Population composition ratio (by age)" |
 | 人口構成比［年齢別］ / R1–R5 (60, 75, 85, 100 and over; 20–69) | `ratio_60plus`, `ratio_75plus`, `ratio_85plus`, `ratio_100plus`, `ratio_20_69` | % | same |
 | 平均年齢 | `average_age` | years | census2020_terms.pdf p.6: "Average Age" |
