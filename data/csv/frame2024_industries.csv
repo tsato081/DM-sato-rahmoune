@@ -1,0 +1,766 @@
+industry_code,industry_hierarchy,industry_division,industry_name
+AR,1,AR,"All industries (excluding S_Government, except elsewhere classified)"
+AB,1,AB,"Agriculture, Forestry and Fisheries"
+A,2,A,Agriculture and Forestry
+01,4,A,Agriculture
+010,5,A,Establishments engaged in administrative or ancillary economic activities (01_Agriculture)
+011,5,A,Crop farming
+012,5,A,Livestock farming
+013,5,A,"Agricultural services, except gardening services"
+014,5,A,Gardening services
+02,4,A,Forestry
+020,5,A,Establishments engaged in administrative or ancillary economic activities (02_Forestry)
+021,5,A,Timber tracts
+022,5,A,Logging
+023,5,A,"Special forest product production, except growing of mushrooms"
+024,5,A,Forestry services
+029,5,A,Miscellaneous forestry
+B,2,B,Fisheries
+03,4,B,"Fisheries, except aquaculture"
+030,5,B,"Establishments engaged in administrative or ancillary economic activities (03_Fisheries, except aquaculture)"
+031,5,B,Marine fisheries
+032,5,B,Inland water fisheries
+04,4,B,Aquaculture
+040,5,B,Establishments engaged in administrative or ancillary economic activities (04_Aquaculture)
+041,5,B,Marine aquaculture
+042,5,B,Inland water aquaculture
+CR,1,CR,"Non-Agriculture, Forestry and Fisheries (excluding S_Government, except elsewhere classified)"
+C,2,C,Mining and Quarrying of Stone and Gravel
+05,4,C,Mining and quarrying of stone and gravel
+050,5,C,Establishments engaged in administrative or ancillary economic activities (05_Mining and quarrying of stone and gravel)
+051,5,C,Metal mining
+052,5,C,Coal and lignite mining
+053,5,C,Crude petroleum and natural gas production
+054,5,C,"Stone quarrying, sand and gravel pits"
+055,5,C,"Ceramic mineral mining (minerals only for refractory, pottery and porcelain, glass and cement materials)"
+059,5,C,Miscellaneous mineral mining
+D,2,D,Construction
+06,4,D,"Construction work, general including public and private construction work"
+060,5,D,"Establishments engaged in administrative or ancillary economic activities (06_Construction work, general including public and private construction work)"
+061,5,D,General civil engineering work and building work
+062,5,D,"Civil engineering work, except paving work"
+063,5,D,Paving work
+064,5,D,"Building work, except wooden building work"
+065,5,D,Wooden building work
+066,5,D,Renovation work
+07,4,D,"Construction work by specialist contractor, except equipment installation work"
+070,5,D,"Establishments engaged in administrative or ancillary economic activities (07_Construction work by specialist contractor, except equipment installation work)"
+071,5,D,Carpentry work
+072,5,D,"Scaffolding work, earth work and concrete work"
+073,5,D,Steel-frame and steel reinforcement work
+074,5,D,"Stone, brick, tile and concrete block work"
+075,5,D,Plaster work
+076,5,D,Sheet-metal work and hardware work
+077,5,D,Painting work
+078,5,D,Flooring and interior finish work
+079,5,D,Miscellaneous construction work by specialist contractor
+08,4,D,Equipment installation work
+080,5,D,Establishments engaged in administrative or ancillary economic activities (08_Equipment installation work)
+081,5,D,Electric work
+082,5,D,Telecommunication work and signal system work
+083,5,D,"Piping work, except water-well drilling work"
+084,5,D,Machine and equipment installation work
+089,5,D,Miscellaneous equipment installation work
+E,2,E,Manufacturing
+09,4,E,Manufacture of food
+090,5,E,Establishments engaged in administrative or ancillary economic activities (09_Manufacture of food)
+091,5,E,Livestock products
+092,5,E,Seafood products
+093,5,E,Canned and preserved fruit and vegetable products
+094,5,E,Seasonings
+095,5,E,Sugar processing
+096,5,E,Flour and grain mill products
+097,5,E,Bakery and confectionery products
+098,5,E,Animal and vegetable oils and fats
+099,5,E,Miscellaneous foods and related products
+10,4,E,"Manufacture of beverages, tobacco and feed"
+100,5,E,"Establishments engaged in administrative or ancillary economic activities (10_Manufacture of beverages, tobacco and feed)"
+101,5,E,Soft drinks and carbonated water
+102,5,E,Alcoholic beverages
+103,5,E,"Tea and coffee, except soft drinks and carbonated water"
+104,5,E,Manufactured ice
+105,5,E,Tobacco manufactures
+106,5,E,Prepared animal foods and organic fertilizers
+11,4,E,Manufacture of textile mill products
+110,5,E,Establishments engaged in administrative or ancillary economic activities (11_Manufacture of textile mill products)
+111,5,E,"Silk reeling plants, spinning mills, chemical fibers and twisting and bulky yarns"
+112,5,E,Woven fabric mills
+113,5,E,Knit fabric mills
+114,5,E,Dyed and finished textiles
+115,5,E,"Rope, netting, lace and crude textile products"
+116,5,E,"Garments and shirts, except Japanese style"
+117,5,E,Underwear
+118,5,E,"Japanese style apparel, other textile apparel and accessories"
+119,5,E,Miscellaneous fabricated textile products
+12,4,E,"Manufacture of lumber and wood products, except furniture"
+120,5,E,"Establishments engaged in administrative or ancillary economic activities (12_Manufacture of lumber and wood products, except furniture)"
+121,5,E,"Sawing, planing and wood products"
+122,5,E,"Millwork, plywood and prefabricated structural wood products"
+123,5,E,"Wooden, bamboo and rattan containers"
+129,5,E,"Miscellaneous manufacture of wood products, including bamboo and rattan"
+13,4,E,Manufacture of furniture and fixtures
+130,5,E,Establishments engaged in administrative or ancillary economic activities (13_Manufacture of furniture and fixtures)
+131,5,E,Furniture
+132,5,E,Furniture for religious purposes
+133,5,E,Fixtures
+139,5,E,Miscellaneous furniture and fixtures
+14,4,E,"Manufacture of pulp, paper and paper products"
+140,5,E,"Establishments engaged in administrative or ancillary economic activities (14_Manufacture of pulp, paper and paper products)"
+141,5,E,Pulp
+142,5,E,Paper
+143,5,E,Coated and glazed paper
+144,5,E,Paper products
+145,5,E,Paper containers
+149,5,E,"Miscellaneous pulp, paper and paper worked products"
+15,4,E,Printing and allied industries
+150,5,E,Establishments engaged in administrative or ancillary economic activities (15_Printing and allied industries)
+151,5,E,Printing
+152,5,E,Plate making for printing
+153,5,E,Bookbinding and printed matter
+159,5,E,Service related to printing
+16,4,E,Manufacture of chemical and allied products
+160,5,E,Establishments engaged in administrative or ancillary economic activities (16_Manufacture of chemical and allied products)
+161,5,E,Chemical fertilizers
+162,5,E,Industrial inorganic chemicals
+163,5,E,Industrial organic chemicals
+164,5,E,"Oil and fat products, soaps, synthetic detergents, surface-active agents and paints"
+165,5,E,Drugs and medicines
+166,5,E,"Cosmetics, toothpaste and toilet preparations"
+169,5,E,Miscellaneous chemical and allied products
+17,4,E,Manufacture of petroleum and coal products
+170,5,E,Establishments engaged in administrative or ancillary economic activities (17_Manufacture of petroleum and coal products)
+171,5,E,Petroleum refining
+172,5,E,Lubricating oils and greases (not made in petroleum refineries)
+173,5,E,Coke
+174,5,E,Paving materials
+179,5,E,Miscellaneous petroleum and coal products
+18,4,E,"Manufacture of plastic products, except otherwise classified"
+180,5,E,"Establishments engaged in administrative or ancillary economic activities (18_Manufacture of plastic products, except otherwise classified)"
+181,5,E,"Plastic plates, bars and rods, pipes and tubes, pipe fittings and profile extrusions"
+182,5,E,"Plastic films, sheets, floor coverings and synthetic leather"
+183,5,E,Industrial plastic products
+184,5,E,Foamed and reinforced plastic products
+185,5,E,"Compounding plastic materials, including reclaimed plastics"
+189,5,E,Miscellaneous plastic products
+19,4,E,Manufacture of rubber products
+190,5,E,Establishments engaged in administrative or ancillary economic activities (19_Manufacture of rubber products)
+191,5,E,Tires and inner tubes
+192,5,E,Rubber and plastic footwear and its findings
+193,5,E,Rubber belts and hoses and mechanical rubber goods products
+199,5,E,Miscellaneous rubber products
+20,4,E,"Manufacture of leather tanning, leather products and fur skins"
+200,5,E,"Establishments engaged in administrative or ancillary economic activities (20_Manufacture of leather tanning, leather products and fur skins)"
+201,5,E,Leather tanning and finishing
+202,5,E,"Mechanical leather products, except gloves and mittens"
+203,5,E,Cut stock and findings for boots and shoes
+204,5,E,Leather footwear
+205,5,E,Leather gloves and mittens
+206,5,E,Baggage
+207,5,E,Handbags and small leather cases
+208,5,E,Fur skins
+209,5,E,Miscellaneous leather products
+21,4,E,"Manufacture of ceramic, stone and clay products"
+210,5,E,"Establishments engaged in administrative or ancillary economic activities (21_Manufacture of ceramic, stone and clay products)"
+211,5,E,Glass and its products
+212,5,E,Cement and its products
+213,5,E,"Structural clay products, except those of pottery"
+214,5,E,Pottery and related products
+215,5,E,Clay refractories
+216,5,E,Carbon and graphite products
+217,5,E,Abrasive products
+218,5,E,Aggregate and stone products
+219,5,E,"Miscellaneous ceramic, stone and clay products"
+22,4,E,Manufacture of iron and steel
+220,5,E,Establishments engaged in administrative or ancillary economic activities (22_Manufacture of iron and steel)
+221,5,E,Iron industries
+222,5,E,"Steel, with rolling facilities"
+223,5,E,"Steel materials, except made by smelting furnaces and steel works with rolling facilities, except coated steel"
+224,5,E,Coated steel
+225,5,E,Ferrous metal machine parts and tooling products
+229,5,E,Miscellaneous iron and steel
+23,4,E,Manufacture of non-ferrous metals and products
+230,5,E,Establishments engaged in administrative or ancillary economic activities (23_Manufacture of non-ferrous metals and products)
+231,5,E,Primary smelting and refining of non-ferrous metals
+232,5,E,"Secondary smelting and refining of non-ferrous metals, including non-ferrous alloys"
+233,5,E,"Rolling of non-ferrous metals and alloys, including drawing and extruding"
+234,5,E,Electric wire and cable
+235,5,E,Non-ferrous metal machine parts and tooling products
+239,5,E,Miscellaneous non-ferrous metal products
+24,4,E,Manufacture of fabricated metal products
+240,5,E,Establishments engaged in administrative or ancillary economic activities (24_Manufacture of fabricated metal products)
+241,5,E,Tin cans and other plated sheet products
+242,5,E,"Tableware (occidental type), cutlery, hand tools and hardware"
+243,5,E,"Heating and cooking apparatus, and plumbing supplies"
+244,5,E,"Fabricated constructional and architectural metal products, including fabricated plate work and sheet metal work"
+245,5,E,Metal machine parts and tooling products
+246,5,E,"Metal coating, engraving and heat treating, except enameled ironware"
+247,5,E,"Fabricated wire products, except screws"
+248,5,E,"Bolts, nuts, rivets, machine screws and wood screws"
+249,5,E,Miscellaneous fabricated metal products
+25,4,E,Manufacture of general-purpose machinery
+250,5,E,Establishments engaged in administrative or ancillary economic activities (25_Manufacture of general-purpose machinery)
+251,5,E,"Boilers, engines and turbines"
+252,5,E,Pumps and compressors
+253,5,E,General industry machinery and equipment
+259,5,E,Miscellaneous general-purpose machinery and machine parts
+26,4,E,Manufacture of production machinery
+260,5,E,Establishments engaged in administrative or ancillary economic activities (26_Manufacture of production machinery)
+261,5,E,"Agricultural machinery and equipment, except agricultural tools"
+262,5,E,Machinery and equipment for construction and mining
+263,5,E,Textile machinery
+264,5,E,Daily lives industry machinery
+265,5,E,Basic material industry machinery
+266,5,E,Metalworking machinery and its equipment
+267,5,E,Semiconductor and flat-panel display manufacturing equipment
+269,5,E,Miscellaneous production machinery and machine parts
+27,4,E,Manufacture of business oriented machinery
+270,5,E,Establishments engaged in administrative or ancillary economic activities (27_Manufacture of business oriented machinery)
+271,5,E,Office machines
+272,5,E,Service industry and amusement machines
+273,5,E,"Measuring instruments, analytical instruments, testing machines, surveying instruments and physical and chemical instruments"
+274,5,E,Medical instruments and apparatus
+275,5,E,Optical instruments and lenses
+276,5,E,Ordnance and accessories
+28,4,E,"Electronic parts, devices and electronic circuits"
+280,5,E,"Establishments engaged in administrative or ancillary economic activities (28_Electronic parts, devices and electronic circuits)"
+281,5,E,Electronic devices
+282,5,E,Electronic parts
+283,5,E,Storage media
+284,5,E,Electronic circuit
+285,5,E,Unit parts
+289,5,E,"Miscellaneous electronic parts, devices and electronic circuits"
+29,4,E,"Manufacture of electrical machinery, equipment and supplies"
+290,5,E,"Establishments engaged in administrative or ancillary economic activities (29_Manufacture of electrical machinery, equipment and supplies)"
+291,5,E,"Electrical generating, transmission, and distribution apparatus"
+292,5,E,Industrial electrical apparatus
+293,5,E,Household electric appliances
+294,5,E,Electric bulbs and lighting fixtures
+295,5,E,Primary batteries (dry and wet)
+296,5,E,Electronic equipment
+297,5,E,Electric measuring instruments
+299,5,E,Miscellaneous electrical machinery equipment and supplies
+30,4,E,Manufacture of information and communication electronics equipment
+300,5,E,Establishments engaged in administrative or ancillary economic activities (30_Manufacture of information and communication electronics equipment)
+301,5,E,Communication equipment and related products
+302,5,E,Image and audio equipment
+303,5,E,"Electronic data processing machines, digital and analog computer, equipment"
+31,4,E,Manufacture of transportation equipment
+310,5,E,Establishments engaged in administrative or ancillary economic activities (31_Manufacture of transportation equipment)
+311,5,E,"Motor vehicles, parts and accessories"
+312,5,E,Railroad equipment and parts
+313,5,E,"Shipbuilding and repairing, and marine engines"
+314,5,E,Aircraft and parts
+315,5,E,Industrial trucks and parts and accessories
+319,5,E,Miscellaneous transportation equipment
+32,4,E,Miscellaneous manufacturing industries
+320,5,E,Establishments engaged in administrative or ancillary economic activities (32_Miscellaneous manufacturing industries)
+321,5,E,"Precious metal products, including jewel"
+322,5,E,"Costume jewelry, costume accessories, buttons and related products, except precious metals and jewelry"
+323,5,E,"Watches, clocks, clockwork-operated devices and parts"
+324,5,E,Musical instruments
+325,5,E,Toys and sporting goods
+32A,6,E,Toys
+32B,6,E,Sporting and athletic goods
+326,5,E,"Pens, lead pencils, painting materials and stationery"
+327,5,E,Lacquer ware
+328,5,E,"Sundry goods of ""tatami"" mats, etc."
+329,5,E,"Manufacturing industries, n.e.c."
+32C,6,E,"Information recording materials, except newspapers, books, other printed products, etc."
+32D,6,E,"Miscellaneous manufacturing industries, n.e.c."
+F,2,F,"Electricity, Gas, Heat Supply and Water"
+33,4,F,"Production, transmission and distribution of electricity"
+330,5,F,"Establishments engaged in administrative or ancillary economic activities (33_Production, transmission and distribution of electricity)"
+331,5,F,"Production, transmission and distribution of electricity"
+34,4,F,Production and distribution of gas
+340,5,F,Establishments engaged in administrative or ancillary economic activities (34_Production and distribution of gas)
+341,5,F,Production and distribution of gas
+35,4,F,Heat supply
+350,5,F,Establishments engaged in administrative or ancillary economic activities (35_Heat supply)
+351,5,F,Heat supply
+36,4,F,"Collection, purification and distribution of water, and sewage collection, processing and disposal"
+360,5,F,"Establishments engaged in administrative or ancillary economic activities (36_Collection, purification and distribution of water, and sewage collection, processing and disposal)"
+361,5,F,"Water for end users, except industrial users"
+362,5,F,Water for industrial users
+363,5,F,Sewerage
+G,2,G,Information and Communications
+G1,3,G1,"Information and communications (Communications, broadcasting and video picture, sound information, character information production and distribution)"
+37,4,G1,Communications
+370,5,G1,Establishments engaged in administrative or ancillary economic activities (37_Communications)
+371,5,G1,Fixed telecommunications
+372,5,G1,Mobile telecommunications
+373,5,G1,Services incidental to telecommunications
+38,4,G1,Broadcasting
+380,5,G1,Establishments engaged in administrative or ancillary economic activities (38_Broadcasting)
+381,5,G1,"Public broadcasting, except cablecasting"
+382,5,G1,"Private-sector broadcasting, except cablecasting"
+383,5,G1,Cablecasting
+41,4,G1,"Video picture information, sound information, character information production and distribution"
+410,5,G1,"Establishments engaged in administrative or ancillary economic activities (41_Video picture information, sound information, character information production and distribution)"
+411,5,G1,Video picture information production and distribution
+412,5,G1,Sound information production
+413,5,G1,Newspaper publishers
+414,5,G1,"Publishers, except newspapers"
+415,5,G1,Commercial art and graphic design
+416,5,G1,"Services incidental to video picture, sound information, character information production and distribution"
+G2,3,G2,Information and communications (Information services and internet based services)
+39,4,G2,Information services
+390,5,G2,Establishments engaged in administrative or ancillary economic activities (39_Information services)
+391,5,G2,Computer programming and other software services
+392,5,G2,Data processing and information services
+39A,6,G2,Data processing services
+39B,6,G2,"Research and information services, except marketing or opinion research services"
+39C,6,G2,Miscellaneous data processing and information services
+40,4,G2,Internet based services
+400,5,G2,Establishments engaged in administrative or ancillary economic activities (40_Internet based services)
+401,5,G2,Internet based services
+H,2,H,Transport and Postal Activities
+42,4,H,Railway transport
+420,5,H,Establishments engaged in administrative or ancillary economic activities (42_Railway transport)
+421,5,H,Railway transport
+43,4,H,Road passenger transport
+430,5,H,Establishments engaged in administrative or ancillary economic activities (43_Road passenger transport)
+431,5,H,Common omnibus operators
+432,5,H,Common taxicab operators
+433,5,H,Contracted omnibus operators
+439,5,H,Miscellaneous road passenger transport
+44,4,H,Road freight transport
+440,5,H,Establishments engaged in administrative or ancillary economic activities (44_Road freight transport)
+441,5,H,Common motor trucking
+442,5,H,Motor trucking (particularly-contracted)
+443,5,H,Mini-sized vehicle freight transport
+444,5,H,Collect-and-deliver freight transport
+449,5,H,Miscellaneous road freight transport
+45,4,H,Water transport
+450,5,H,Establishments engaged in administrative or ancillary economic activities (45_Water transport)
+451,5,H,Oceangoing transport
+452,5,H,Coastwise transport
+453,5,H,Inland water transport
+454,5,H,Vessel and ship rental and leasing
+46,4,H,Air transport
+460,5,H,Establishments engaged in administrative or ancillary economic activities (46_Air transport)
+461,5,H,Air transport
+462,5,H,"Aircraft service, except air transport"
+47,4,H,Warehousing
+470,5,H,Establishments engaged in administrative or ancillary economic activities (47_Warehousing)
+471,5,H,Ordinary warehousing
+472,5,H,Refrigerated warehousing
+48,4,H,Services incidental to transport
+480,5,H,Establishments engaged in administrative or ancillary economic activities (48_Services incidental to transport)
+481,5,H,Port transport
+482,5,H,"Freight forwarding, except collect-and-deliver freight transport"
+483,5,H,Transport agencies
+484,5,H,Packing and crating
+485,5,H,Transport facilities services
+489,5,H,Miscellaneous services incidental to transport
+49,4,H,"Postal activities, including mail delivery"
+490,5,H,"Establishments engaged in administrative or ancillary economic activities (49_Postal activities, including mail delivery)"
+491,5,H,"Postal activities, including mail delivery"
+I,2,I,Wholesale and Retail Trade
+I1,3,I1,Wholesale
+50,4,I1,"Wholesale trade, general merchandise"
+500,5,I1,"Establishments engaged in administrative or ancillary economic activities (50_Wholesale trade, general merchandise)"
+501,5,I1,"Wholesale trade, general merchandise"
+50A,6,I1,"Wholesale trade, general merchandise (with 100 or more employees)"
+50B,6,I1,"Miscellaneous wholesale trade, general merchandise"
+51,4,I1,Wholesale trade (textile and apparel)
+510,5,I1,Establishments engaged in administrative or ancillary economic activities (51_Wholesale trade (textile and apparel))
+511,5,I1,"Textile products (except apparel, apparel accessories and notions)"
+512,5,I1,Apparel
+513,5,I1,Apparel accessories and notions
+52,4,I1,Wholesale trade (food and beverages)
+520,5,I1,Establishments engaged in administrative or ancillary economic activities (52_Wholesale trade (food and beverages))
+521,5,I1,"Agricultural, animal and poultry farm and aquatic products"
+52A,6,I1,"Rice, barley and other cereals"
+52B,6,I1,Vegetables and fruits
+52C,6,I1,Meat and poultry
+52D,6,I1,"Fresh fish, shellfish and seaweed"
+52E,6,I1,"Miscellaneous agricultural, animal and poultry farm and aquatic products"
+522,5,I1,Food and beverages
+53,4,I1,"Wholesale trade (building materials, minerals and metals, etc.)"
+530,5,I1,"Establishments engaged in administrative or ancillary economic activities (53_Wholesale trade (building materials, minerals and metals, etc.))"
+531,5,I1,Building materials
+532,5,I1,Chemicals and related products
+533,5,I1,Petroleum and minerals
+534,5,I1,Iron and steel products
+535,5,I1,Non-ferrous metals
+536,5,I1,Recycled material
+54,4,I1,Wholesale trade (machinery and equipment)
+540,5,I1,Establishments engaged in administrative or ancillary economic activities (54_Wholesale trade (machinery and equipment))
+541,5,I1,Industry machinery and equipment
+542,5,I1,Motor vehicles
+543,5,I1,"Electrical machinery, equipment and supplies"
+549,5,I1,Miscellaneous machinery and equipment
+55,4,I1,Miscellaneous wholesale trade
+550,5,I1,Establishments engaged in administrative or ancillary economic activities (55_Miscellaneous wholesale trade)
+551,5,I1,"Furniture, fixtures and house furnishings"
+552,5,I1,Drugs and toiletries
+553,5,I1,Paper and paper products
+559,5,I1,"Other products, n.e.c."
+55A,6,I1,Agents and brokers
+55B,6,I1,"Other products, n.e.c."
+I2,3,I2,Retail Trade
+56,4,I2,"Retail trade, general merchandise"
+560,5,I2,"Establishments engaged in administrative or ancillary economic activities (56_Retail trade, general merchandise)"
+561,5,I2,Department stores
+562,5,I2,General merchandise supermarkets
+563,5,I2,Convenience stores
+564,5,I2,Drugstores
+565,5,I2,Home improvement stores
+566,5,I2,Uniform-price stores
+569,5,I2,"Other retail trade, general merchandise"
+57,4,I2,"Retail trade (dry goods, apparel and apparel accessories)"
+570,5,I2,"Establishments engaged in administrative or ancillary economic activities (57_Retail trade (dry goods, apparel and apparel accessories))"
+571,5,I2,"Dry goods, cloth and bedding stores"
+572,5,I2,Men's clothing stores
+573,5,I2,Ladies' and children's clothing
+574,5,I2,Footwear stores
+579,5,I2,"Miscellaneous dry goods, apparel and apparel accessories stores"
+58,4,I2,Retail trade (food and beverage)
+580,5,I2,Establishments engaged in administrative or ancillary economic activities (58_Retail trade (food and beverage))
+581,5,I2,Grocery stores
+582,5,I2,Vegetable and fruit stores
+583,5,I2,Meat and poultry stores
+584,5,I2,Fresh fish stores
+585,5,I2,Liquor stores
+586,5,I2,Confectioneries and bakeries
+589,5,I2,"Retail food and beverage stores, n.e.c."
+58A,6,I2,Delicatessen stores
+58B,6,I2,"Food and beverage stores, n.e.c."
+59,4,I2,Retail trade (machinery and equipment)
+590,5,I2,Establishments engaged in administrative or ancillary economic activities (59_Retail trade (machinery and equipment))
+591,5,I2,Motor vehicles
+592,5,I2,Bicycles
+593,5,I2,"Appliance stores, except motorcycles and bicycles"
+60,4,I2,Miscellaneous retail trade
+600,5,I2,Establishments engaged in administrative or ancillary economic activities (60_Miscellaneous retail trade)
+601,5,I2,"Furniture, fixture and ""tatami"" mat stores"
+602,5,I2,Household utensil stores
+603,5,I2,Drug and toiletry stores
+604,5,I2,Farming and gardening supply stores
+605,5,I2,Fuel stores
+606,5,I2,Book and stationery stores
+607,5,I2,"Sporting goods, toy, amusement goods and musical instrument stores"
+60A,6,I2,Sporting goods stores
+60B,6,I2,Toy and amusement goods stores
+60C,6,I2,Musical instrument stores
+608,5,I2,"Camera, watch and spectacles stores"
+609,5,I2,"Stores, n.e.c."
+60D,6,I2,Flowers and other florists stores
+60E,6,I2,Pet stores
+60F,6,I2,"Secondhand stores, n.e.c."
+60G,6,I2,"Retail trade, n.e.c."
+61,4,I2,Nonstore retailers
+610,5,I2,Establishments engaged in administrative or ancillary economic activities (61_Nonstore retailers)
+611,5,I2,Mail-order houses and door-to-door sales
+612,5,I2,Vending machine sales
+619,5,I2,Miscellaneous nonstore retailers
+J,2,J,Finance and Insurance
+62,4,J,Banking
+620,5,J,Establishments engaged in administrative or ancillary economic activities (62_Banking)
+621,5,J,Central bank
+622,5,J,"Banks, except central bank"
+63,4,J,Financial institutions for cooperative organizations
+630,5,J,Establishments engaged in administrative or ancillary economic activities (63_Financial institutions for cooperative organizations)
+631,5,J,Financial institutions for small-business
+632,5,J,"Financial institutions for agriculture, forestry and fisheries finances"
+64,4,J,"Non-deposit money corporations, including lending and credit card business"
+640,5,J,"Establishments engaged in administrative or ancillary economic activities (64_Non-deposit money corporations, including lending and credit card business)"
+641,5,J,Money lending business
+642,5,J,Pawnbrokers
+643,5,J,Credit card and installment finance businesses
+649,5,J,Miscellaneous non-deposit money corporations
+65,4,J,Financial products transaction dealers and futures commodity transaction dealers
+650,5,J,Establishments engaged in administrative or ancillary economic activities (65_Financial products transaction dealers and futures commodity transaction dealers)
+651,5,J,Financial products transaction dealers
+652,5,J,Futures commodity transaction dealers and commodity investment advisors
+66,4,J,Financial auxiliaries
+660,5,J,Establishments engaged in administrative or ancillary economic activities (66_Financial auxiliaries)
+661,5,J,Financial auxiliaries
+662,5,J,Trust businesses
+663,5,J,Financial brokers and intermediaries
+67,4,J,"Insurance institutions, including insurance agents, brokers and services"
+670,5,J,"Establishments engaged in administrative or ancillary economic activities (67_Insurance institutions, including insurance agents, brokers and services)"
+671,5,J,Life insurance institutions
+672,5,J,Non-life insurance institutions
+673,5,J,Mutual aid organizations and small-amount short-term insurance providers
+674,5,J,Insurance agents and brokers
+675,5,J,Insurance service institutions
+K,2,K,Real Estate and Goods Rental and Leasing
+K1,3,K1,Real Estate
+68,4,K1,Real estate agencies
+680,5,K1,Establishments engaged in administrative or ancillary economic activities (68_Real estate agencies)
+681,5,K1,Sales agents of buildings and houses and land subdividers and developers
+682,5,K1,Real estate agents and brokers
+69,4,K1,Real estate lessors and managers
+690,5,K1,Establishments engaged in administrative or ancillary economic activities (69_Real estate lessors and managers)
+691,5,K1,"Real estate lessors, except house and room lessors"
+692,5,K1,House and room lessors
+693,5,K1,Automobile parking
+694,5,K1,Real estate managers
+K2,3,K2,Goods Rental and Leasing
+70,4,K2,Goods rental and leasing
+700,5,K2,Establishments engaged in administrative or ancillary economic activities (70_Goods rental and leasing)
+701,5,K2,General goods rental and leasing
+70C,6,K2,General goods leasing
+70D,6,K2,"General goods rental and leasing, except general goods leasing"
+702,5,K2,Industrial equipment and machinery rental
+703,5,K2,Office machinery rental
+704,5,K2,Automobile rental
+705,5,K2,Sports and hobby goods rental
+709,5,K2,Miscellaneous goods rental and leasing
+70A,6,K2,"Audio and visual recordings rental, except otherwise classified"
+70B,6,K2,"Goods rental and leasing, n.e.c."
+L,2,L,"Scientific Research, Professional and Technical Services"
+71,4,L,Scientific and development research institutes
+710,5,L,Establishments engaged in administrative or ancillary economic activities (71_Scientific and development research institutes)
+711,5,L,Research institutes for natural sciences
+712,5,L,Research institutes for humanities and social sciences
+72,4,L,"Professional services, n.e.c."
+720,5,L,"Establishments engaged in administrative or ancillary economic activities (72_Professional services, n.e.c.)"
+721,5,L,Lawyers' and patent attorneys' offices
+72A,6,L,Lawyers' offices
+72B,6,L,Patent attorneys' offices
+722,5,L,"Notaries public's, judicial scriveners' and land and house surveyors' offices"
+72J,6,L,Notaries public's and judicial scriveners' offices
+72K,6,L,Land and house surveyors' offices
+723,5,L,Administrative scriveners' offices
+724,5,L,Certified public accountants' and certified tax accountants' offices
+72C,6,L,Certified public accountants' offices
+72D,6,L,Certified tax accountants' offices
+725,5,L,Certified social insurance and labor consultants' offices
+726,5,L,Design services
+727,5,L,Authors and artists
+728,5,L,Business consultants and pure holding companies
+72E,6,L,Business consultants
+72F,6,L,Pure holding companies
+729,5,L,Miscellaneous professional services
+72G,6,L,Detective agencies and credit bureaus
+72H,6,L,"Professional services, n.e.c."
+73,4,L,Advertising
+730,5,L,Establishments engaged in administrative or ancillary economic activities (73_Advertising)
+731,5,L,Advertising
+74,4,L,"Technical services, n.e.c."
+740,5,L,"Establishments engaged in administrative or ancillary economic activities (74_Technical services, n.e.c.)"
+741,5,L,Veterinary services
+742,5,L,Engineering and architectural services
+74A,6,L,Architectural design services
+74B,6,L,Surveying services
+74C,6,L,Miscellaneous engineering and architectural services
+743,5,L,Mechanical design services
+744,5,L,Commodity inspection and non-destructive testing services
+745,5,L,Surveyor certification
+746,5,L,Photographic studios
+74D,6,L,"Photographic studios, except commercial photography"
+74E,6,L,Commercial photography
+749,5,L,Miscellaneous technical services
+M,2,M,"Accommodations, Eating and Drinking Services"
+M1,3,M1,Accommodations
+75,4,M1,Accommodations
+750,5,M1,Establishments engaged in administrative or ancillary economic activities (75_Accommodations)
+751,5,M1,Hotels
+752,5,M1,Common lodging houses
+753,5,M1,Boarding houses
+759,5,M1,Miscellaneous lodging places
+75A,6,M1,Lodging facilities of companies and associations
+75B,6,M1,"Lodging places, n.e.c."
+M2,3,M2,"Eating and drinking places, and Food tale out and delivery services"
+76,4,M2,Eating and drinking places
+760,5,M2,Establishments engaged in administrative or ancillary economic activities (76_Eating and drinking places)
+761,5,M2,"Eating places, except specialty restaurants"
+762,5,M2,Specialty restaurants
+76A,6,M2,Japanese restaurants
+76B,6,M2,Chinese restaurants
+76C,6,M2,Grilled meats restaurants (Japanese style)
+76D,6,M2,Miscellaneous specialty restaurants
+763,5,M2,"""Soba"" and ""udon"" (Japanese noodles) restaurants"
+764,5,M2,"""Sushi"" bars"
+765,5,M2,Drinking houses and beer hall
+766,5,M2,"Bars, cabarets and night clubs"
+767,5,M2,Coffee shops
+769,5,M2,Miscellaneous eating and drinking places
+76E,6,M2,Hamburger shops
+76F,6,M2,"""Okonomiyaki,"" ""Yakisoba"" and ""Takoyaki"" (Japanese snacks) shops"
+76G,6,M2,"Eating and drinking places, n.e.c."
+77,4,M2,Food take out and delivery services
+770,5,M2,Establishments engaged in administrative or ancillary economic activities (77_Food take out and delivery services)
+771,5,M2,Food take out services
+772,5,M2,Food delivery services
+773,5,M2,Food service contractors
+N,2,N,Living-Related and Personal Services and Amusement Services
+78,4,N,"Laundry, beauty and bath services"
+780,5,N,"Establishments engaged in administrative or ancillary economic activities (78_Laundry, beauty and bath services)"
+781,5,N,Laundries
+78A,6,N,General laundries
+78B,6,N,Linen supply
+782,5,N,Barbershops
+783,5,N,Hair-dressing and beauty salon
+784,5,N,Public bathhouses
+785,5,N,Miscellaneous public bathhouses
+789,5,N,"Miscellaneous laundry, beauty and bath services"
+78C,6,N,Fulling and dyeing plants
+78D,6,N,"Laundry, beauty and bath services, n.e.c."
+79,4,N,Miscellaneous living-related and personal services
+790,5,N,Establishments engaged in administrative or ancillary economic activities (79_Miscellaneous living-related and personal services)
+791,5,N,Travel agency
+793,5,N,Garment sewing services and repairs
+794,5,N,"Checkrooms, safety deposit services"
+795,5,N,Crematories and graveyard custodians
+796,5,N,Ceremonial occasions
+79A,6,N,Funeral services
+79B,6,N,Wedding ceremony halls
+79C,6,N,Ceremonial occasion mutual aid society
+799,5,N,"Living-related and personal services, n.e.c."
+79D,6,N,"Photographic print, film developing and finishing"
+79E,6,N,"Miscellaneous living-related and personal services, n.e.c."
+80,4,N,Services for amusement and hobbies
+800,5,N,Establishments engaged in administrative or ancillary economic activities (80_Services for amusement and hobbies)
+801,5,N,Cinemas
+802,5,N,"Performances (except otherwise classified), theatrical companies"
+803,5,N,"Bicycle, horse, motorcar and motorboat race track operations and companies"
+804,5,N,Sports facilities
+80A,6,N,"Sports facilities, except otherwise classified"
+80B,6,N,Gymnasiums (sports hall)
+80C,6,N,Golf courses
+80D,6,N,Golf driving range operations
+80E,6,N,Bowling alleys
+80F,6,N,Tennis clubs
+80G,6,N,Baseball and tennis batting range operations
+80H,6,N,Fitness centers
+805,5,N,Public gardens and amusement parks
+806,5,N,Amusement and recreation facilities
+80J,6,N,"""Mah-jong"" clubs"
+80K,6,N,"""Pachinko"" parlors"
+80L,6,N,Game centers
+80M,6,N,Miscellaneous amusement and recreation facilities
+809,5,N,Miscellaneous amusement and recreation services
+80N,6,N,"""Karaoke"" boxes"
+80Q,6,N,Services incidental to amusement and recreation
+80R,6,N,"Amusement and recreation services, n.e.c."
+O,2,O,"Education, Learning Support"
+O1,3,O1,"Education, learning support (Education)"
+81,4,O1,School education
+810,5,O1,Establishments engaged in administrative or ancillary economic activities (81_School education)
+811,5,O1,Kindergartens
+819,5,O1,Centers for early childhood education and care
+812,5,O1,Elementary schools
+813,5,O1,"Lower secondary schools, compulsory education schools"
+814,5,O1,"Upper secondary, secondary schools"
+815,5,O1,Schools for special needs education
+816,5,O1,Institution of higher education
+817,5,O1,Specialized training colleges and miscellaneous schools
+81A,6,O1,Specialized training colleges
+81B,6,O1,Miscellaneous schools
+818,5,O1,School education support institutions
+O2,3,O2,"Education, learning support (Learning support)"
+82,4,O2,"Miscellaneous education, learning support"
+820,5,O2,"Establishments engaged in administrative or ancillary economic activities (82_Miscellaneous education, learning support)"
+821,5,O2,Social education
+82A,6,O2,Citizen's public halls
+82B,6,O2,Libraries
+82C,6,O2,Museums and art museums
+82D,6,O2,"Zoological gardens, botanical gardens and aquariums"
+82N,6,O2,Correspondence social education
+82P,6,O2,Miscellaneous social education
+822,5,O2,Vocational and educational support facilities
+823,5,O2,Supplementary tutorial schools
+824,5,O2,"Instruction services for arts, culture and technicals"
+82F,6,O2,Music instructions
+82G,6,O2,Calligraphy instructions
+82H,6,O2,"Flower, tea ceremony instructions"
+82J,6,O2,Abacus instructions
+82K,6,O2,Foreign language instructions
+82L,6,O2,Sports and health instructions
+82M,6,O2,"Miscellaneous instruction services for arts, culture and technicals"
+829,5,O2,"Educational and learning support services, n.e.c."
+P,2,P,"Medical, Health Care and Welfare"
+83,4,P,Medical and other health services
+830,5,P,Establishments engaged in administrative or ancillary economic activities (83_Medical and other health services)
+831,5,P,Hospitals
+832,5,P,Clinics of medical practitioners
+833,5,P,Dental clinics
+834,5,P,Maternity clinics and nursing
+83A,6,P,Midwives
+83B,6,P,Nursing
+835,5,P,Health Practitioners
+836,5,P,Services incidental to medical
+83C,6,P,Dental laboratories
+83D,6,P,Miscellaneous services incidental to medical
+84,4,P,Public health and hygiene
+840,5,P,Establishments engaged in administrative or ancillary economic activities (84_Public health and hygiene)
+842,5,P,Health consultation offices
+849,5,P,Other public health and hygiene
+85,4,P,"Social insurance, social welfare and care services"
+850,5,P,"Establishments engaged in administrative or ancillary economic activities (85_Social insurance, social welfare and care services)"
+851,5,P,Social insurance organizations
+853,5,P,Child welfare services
+85A,6,P,Day nursery
+85B,6,P,Miscellaneous child welfare services
+854,5,P,"Welfare services for the aged and care services, except home care help services"
+85C,6,P,Special nursing home for the elderly
+85D,6,P,Health care facilities for the elderly requiring long-term care
+85M,6,P,Integrated facilities for medical and long-term care
+85E,6,P,Day care short stay services for the aged
+85F,6,P,Home-visit care services
+85G,6,P,Group home for the elderly with dementia
+85H,6,P,Fee charging home for the aged
+85J,6,P,Miscellaneous welfare services for the aged and care services
+855,5,P,Welfare services for disabled persons
+859,5,P,"Miscellaneous social insurance, social welfare and care services"
+85K,6,P,Offender rehabilitation services
+85L,6,P,"Miscellaneous social insurance, social welfare and care services, n.e.c."
+Q,2,Q,Compound Services
+Q1,3,Q1,Compound services (Postal services)
+86,4,Q1,Postal services
+860,5,Q1,Establishments engaged in administrative or ancillary economic activities (86_Postal services)
+861,5,Q1,Postal services
+862,5,Q1,Contracted postal services
+Q2,3,Q2,"Compound services (Cooperative associations, n.e.c.)"
+87,4,Q2,"Cooperative associations, n.e.c."
+870,5,Q2,"Establishments engaged in administrative or ancillary economic activities (87_Cooperative associations, n.e.c.)"
+871,5,Q2,"Agriculture, forestry and fisheries cooperative associations, n.e.c."
+872,5,Q2,"Business cooperative associations, n.e.c."
+R,2,R,"Services, n.e.c."
+R1,3,R1,"Services, n.e.c. (Political, business and cultural organizations and religion)"
+93,4,R1,"Political, business and cultural organizations"
+931,5,R1,Business and professional associations
+932,5,R1,Labor organizations
+933,5,R1,"Non-profit cultural, science and art organizations"
+934,5,R1,Political organizations
+939,5,R1,"Non-profit organizations, n.e.c."
+94,4,R1,Religion
+941,5,R1,Shintoism
+942,5,R1,Buddhism
+943,5,R1,Christianity
+949,5,R1,Miscellaneous religions
+R2,3,R2,"Services, n.e.c. (excluding ""Political, business and cultural organizations and religion"")"
+88,4,R2,Waste disposal business
+880,5,R2,Establishments engaged in administrative or ancillary economic activities (88_Waste disposal business)
+881,5,R2,Domestic waste disposal business
+882,5,R2,Industrial waste disposal business
+889,5,R2,Miscellaneous waste disposal business
+89,4,R2,Automobile maintenance services
+890,5,R2,Establishments engaged in administrative or ancillary economic activities (89_Automobile maintenance services)
+891,5,R2,Automobile maintenance services
+90,4,R2,"Machine, etc. repair services, except otherwise classified"
+900,5,R2,"Establishments engaged in administrative or ancillary economic activities (90_Machine, etc. repair services, except otherwise classified)"
+901,5,R2,"Machine repair shops, except electrical machinery, apparatus, appliances and supplies"
+902,5,R2,"Electrical machinery, apparatus, appliances and supplies repair shop"
+903,5,R2,Paper hangers
+909,5,R2,Miscellaneous repair services
+91,4,R2,Employment and worker dispatching services
+910,5,R2,Establishments engaged in administrative or ancillary economic activities (91_Employment and worker dispatching services)
+911,5,R2,Employment services
+912,5,R2,Worker dispatching services
+92,4,R2,Miscellaneous business services
+920,5,R2,Establishments engaged in administrative or ancillary economic activities (92_Miscellaneous business services)
+921,5,R2,"Stenographic, entree document and copy services"
+922,5,R2,Building operation and maintenance services
+92A,6,R2,Building maintenance services
+92B,6,R2,Other building operation and maintenance services
+923,5,R2,Guard services
+929,5,R2,"Business services, n.e.c."
+95,4,R2,Miscellaneous services
+950,5,R2,Establishments engaged in administrative or ancillary economic activities (95_Miscellaneous services)
+951,5,R2,Meeting halls
+952,5,R2,Slaughterhouses
+959,5,R2,"Services, n.e.c."

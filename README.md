@@ -35,6 +35,14 @@ The Excel files are published in Japanese only. Each file can be re-downloaded w
 | `data/raw/frame2024_t4-1a.xlsx` | 2024 Economic Census for Business Frame | 4-1A Privately owned establishments by industry (minor groups) – municipalities (excl. sole proprietors without employees) | 000040389324 |
 | `data/raw/frame2024_t4-1b.xlsx` | 2024 Economic Census for Business Frame | 4-1B Persons engaged by industry (minor groups) – municipalities (excl. sole proprietors without employees) | 000040389325 |
 
+### CSV data
+
+`Script/translate.R` converts each raw Excel file in `data/raw/` into an English CSV in `data/csv/`.
+
+- Translates headers and identifier labels into English and drops Japanese area names.
+- `frame2024_industries.csv` maps the industry column codes in `frame2024_t4-1a.csv` / `t4-1b.csv` to their English names.
+- Full column definitions and translation sources: [`docs/codebook.md`](docs/codebook.md).
+
 ### Methodology documents
 
 English documents from the Statistics Bureau of Japan, stored in `docs/` without modification.
@@ -69,3 +77,4 @@ commit regularly with each commit representing one logical change
 
 ## AI Usage
 - The raw data files in `data/raw/` and the methodology documents in `docs/` were retrieved from e-Stat and the Statistics Bureau of Japan website using Claude in Chrome.
+- Because the downloaded e-Stat Excel files are in Japanese only, AI was used to write `Script/translate.R`, extract `data/csv/frame2024_industries.csv`, and draft `docs/codebook.md` using the official English classifications and glossaries in `docs/` (`ecensus2021_classification.xlsx`, `frame2024_classification.pdf`, `*_terms.pdf`). Only headers and labels were translated.
