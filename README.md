@@ -45,24 +45,24 @@ The Excel files are published in Japanese only. Each file can be re-downloaded w
 
 ### Methodology documents
 
-English documents from the Statistics Bureau of Japan, stored in `docs/` without modification.
+English documents from the Statistics Bureau of Japan, stored in `docs/official/` without modification.
 For the 2025 Population Census, the Statistics Bureau links the 2020 outline and explanation of terms;
 only the questionnaire is specific to 2025.
 
 | File | Content | Source |
 |---|---|---|
-| `docs/census2020_outline.pdf` | 2020 Population Census – outline of the survey | https://www.stat.go.jp/english/data/kokusei/2020/pdf/outline.pdf |
-| `docs/census2020_terms.pdf` | 2020 Population Census – explanation of terms | https://www.stat.go.jp/english/data/kokusei/2020/pdf/exp.pdf |
-| `docs/census2025_questionnaire.pdf` | 2025 Population Census – questionnaire | https://www.stat.go.jp/english/data/kokusei/2025/pdf/qre.pdf |
-| `docs/ecensus2021_outline.pdf` | 2021 Economic Census for Business Activity – outline | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_gaikyoe.pdf |
-| `docs/ecensus2021_terms.pdf` | 2021 Economic Census for Business Activity – explanation of terms | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_term.pdf |
-| `docs/ecensus2021_notes.pdf` | 2021 Economic Census for Business Activity – notes on the statistical tables | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_note.pdf |
-| `docs/ecensus2021_categories.pdf` | 2021 Economic Census for Business Activity – items of category used in the tables | https://www.stat.go.jp/english/data/e-census/2021/pdf/bunruie.pdf |
-| `docs/ecensus2021_classification.xlsx` | 2021 Economic Census for Business Activity – industrial classification (English names of all industry codes in table 6-1) | https://www.stat.go.jp/english/data/e-census/2021/zuhyou/r3classification.xlsx |
-| `docs/frame2024_outline.pdf` | 2024 Economic Census for Business Frame – outline | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_gaiyou_e.pdf |
-| `docs/frame2024_terms.pdf` | 2024 Economic Census for Business Frame – explanation of terms | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_yougo_e.pdf |
-| `docs/frame2024_notes.pdf` | 2024 Economic Census for Business Frame – notes on the statistical tables | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_riyou_e.pdf |
-| `docs/frame2024_classification.pdf` | 2024 Economic Census for Business Frame – industrial classification, JSIC Rev. 14 (English names of all industry codes in tables 4-1A/4-1B) | https://www.stat.go.jp/english/data/e-census/2024/pdf/sangyou_e.pdf |
+| `docs/official/census2020_outline.pdf` | 2020 Population Census – outline of the survey | https://www.stat.go.jp/english/data/kokusei/2020/pdf/outline.pdf |
+| `docs/official/census2020_terms.pdf` | 2020 Population Census – explanation of terms | https://www.stat.go.jp/english/data/kokusei/2020/pdf/exp.pdf |
+| `docs/official/census2025_questionnaire.pdf` | 2025 Population Census – questionnaire | https://www.stat.go.jp/english/data/kokusei/2025/pdf/qre.pdf |
+| `docs/official/ecensus2021_outline.pdf` | 2021 Economic Census for Business Activity – outline | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_gaikyoe.pdf |
+| `docs/official/ecensus2021_terms.pdf` | 2021 Economic Census for Business Activity – explanation of terms | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_term.pdf |
+| `docs/official/ecensus2021_notes.pdf` | 2021 Economic Census for Business Activity – notes on the statistical tables | https://www.stat.go.jp/english/data/e-census/2021/pdf/k_note.pdf |
+| `docs/official/ecensus2021_categories.pdf` | 2021 Economic Census for Business Activity – items of category used in the tables | https://www.stat.go.jp/english/data/e-census/2021/pdf/bunruie.pdf |
+| `docs/official/ecensus2021_classification.xlsx` | 2021 Economic Census for Business Activity – industrial classification (English names of all industry codes in table 6-1) | https://www.stat.go.jp/english/data/e-census/2021/zuhyou/r3classification.xlsx |
+| `docs/official/frame2024_outline.pdf` | 2024 Economic Census for Business Frame – outline | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_gaiyou_e.pdf |
+| `docs/official/frame2024_terms.pdf` | 2024 Economic Census for Business Frame – explanation of terms | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_yougo_e.pdf |
+| `docs/official/frame2024_notes.pdf` | 2024 Economic Census for Business Frame – notes on the statistical tables | https://www.stat.go.jp/english/data/e-census/2024/pdf/kou_riyou_e.pdf |
+| `docs/official/frame2024_classification.pdf` | 2024 Economic Census for Business Frame – industrial classification, JSIC Rev. 14 (English names of all industry codes in tables 4-1A/4-1B) | https://www.stat.go.jp/english/data/e-census/2024/pdf/sangyou_e.pdf |
 
 
 ## git commands
@@ -76,5 +76,5 @@ commit regularly with each commit representing one logical change
 
 
 ## AI Usage
-- The raw data files in `data/raw/` and the methodology documents in `docs/` were retrieved from e-Stat and the Statistics Bureau of Japan website using Claude in Chrome.
-- Because the downloaded e-Stat Excel files are in Japanese only, AI was used to write `Script/translate.R`, extract `data/csv/frame2024_industries.csv`, and draft `docs/codebook.md` using the official English classifications and glossaries in `docs/` (`ecensus2021_classification.xlsx`, `frame2024_classification.pdf`, `*_terms.pdf`). Only headers and labels were translated.
+- The raw data files in `data/raw/` and the methodology documents in `docs/official/` were retrieved from e-Stat and the Statistics Bureau of Japan website using Claude in Chrome.
+- Because the downloaded e-Stat Excel files are in Japanese only, AI was used to write `Script/translate.R`, extract `data/csv/frame2024_industries.csv`, and draft `docs/codebook.md` using the official English classifications and glossaries in `docs/official/` (`ecensus2021_classification.xlsx`, `frame2024_classification.pdf`, `*_terms.pdf`). Only headers and labels were translated.

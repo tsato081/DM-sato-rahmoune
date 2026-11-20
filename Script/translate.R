@@ -97,8 +97,8 @@ for (name in c("census2020_t2-8", "census2025_t2-8")) {
 # 2. 2021 Economic Census for Business Activity (Table 6-1)
 # ---------------------------------------------------------------------------
 
-# Official English industry names from docs/ecensus2021_classification.xlsx (cols 9 & 10)
-cls21 <- read_excel("docs/ecensus2021_classification.xlsx",
+# Official English industry names from docs/official/ecensus2021_classification.xlsx (cols 9 & 10)
+cls21 <- read_excel("docs/official/ecensus2021_classification.xlsx",
                     sheet = 1, skip = 8, col_names = FALSE, col_types = "text",
                     .name_repair = "minimal")
 ind21 <- tibble(code = trimws(cls21[[9]]), name = trimws(cls21[[10]])) |>

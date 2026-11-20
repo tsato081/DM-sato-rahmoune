@@ -7,7 +7,7 @@ The CSV files are produced by `Script/translate.R` (run `Rscript Script/translat
 Each raw Excel file gives one CSV file with the same rows and the same layout.
 The script only translates headers and identifier labels and drops Japanese area names; it does not
 convert symbols (`-`), cast types, filter, merge, reshape, or aggregate. `frame2024_industries.csv`
-is stored as a static lookup table extracted from `docs/frame2024_classification.pdf`.
+is stored as a static lookup table extracted from `docs/official/frame2024_classification.pdf`.
 
 | Raw file (`data/raw/`) | Processed file (`data/csv/`) | Rows | Columns |
 |---|---|---|---|
@@ -33,18 +33,18 @@ is stored as a static lookup table extracted from `docs/frame2024_classification
 
 ## Sources
 
-Official English documents of the Statistics Bureau of Japan, stored in `docs/`:
+Official English documents of the Statistics Bureau of Japan, stored in `docs/official/`:
 
 | File | Used for |
 |---|---|
-| `docs/census2020_terms.pdf` | Population census terms (average age, median age, age not reported, DIDs, area units) |
-| `docs/census2020_outline.pdf` | Population census outline |
-| `docs/ecensus2021_terms.pdf` | Economic census terms (establishments, persons engaged, regular employees, loaned or dispatched employees, persons working at the location) |
-| `docs/ecensus2021_notes.pdf` | Meaning of `-` in the 2021 economic census tables |
-| `docs/ecensus2021_classification.xlsx` | English names of the industry codes in table 6-1 (JSIC Rev. 13) |
-| `docs/frame2024_terms.pdf` | Business frame terms (establishments, persons engaged) |
-| `docs/frame2024_notes.pdf` | Coverage of the 2024 survey and meaning of `-` |
-| `docs/frame2024_classification.pdf` | English names of the industry codes in tables 4-1A/4-1B (JSIC Rev. 14) |
+| `docs/official/census2020_terms.pdf` | Population census terms (average age, median age, age not reported, DIDs, area units) |
+| `docs/official/census2020_outline.pdf` | Population census outline |
+| `docs/official/ecensus2021_terms.pdf` | Economic census terms (establishments, persons engaged, regular employees, loaned or dispatched employees, persons working at the location) |
+| `docs/official/ecensus2021_notes.pdf` | Meaning of `-` in the 2021 economic census tables |
+| `docs/official/ecensus2021_classification.xlsx` | English names of the industry codes in table 6-1 (JSIC Rev. 13) |
+| `docs/official/frame2024_terms.pdf` | Business frame terms (establishments, persons engaged) |
+| `docs/official/frame2024_notes.pdf` | Coverage of the 2024 survey and meaning of `-` |
+| `docs/official/frame2024_classification.pdf` | English names of the industry codes in tables 4-1A/4-1B (JSIC Rev. 14) |
 
 English table titles on e-Stat (the English list pages of each survey):
 
@@ -155,7 +155,7 @@ One row per area × industry, as in the source.
 | 階層 | `industry_hierarchy` | 1 = aggregate (AR, AB, CR), 2 = division, 3 = subdivision (e.g. G1, I1), 4 = major group (2 digits) |
 | 産業大分類 | `industry_division` | division code of the industry |
 | 産業中分類 (code part) | `industry_code` | code as in the source |
-| 産業中分類 (name part) | `industry_name` | docs/ecensus2021_classification.xlsx. AR, AB and CR are written A～R, A～B and C～R there |
+| 産業中分類 (name part) | `industry_name` | docs/official/ecensus2021_classification.xlsx. AR, AB and CR are written A～R, A～B and C～R there |
 | 事業所数 | `establishments` | ecensus2021_terms.pdf p.1: "Establishments" |
 | 従業者数 | `persons_engaged` | ecensus2021_terms.pdf p.1: "Persons engaged" |
 | 従業者数_うち常用雇用者 | `regular_employees` | ecensus2021_terms.pdf p.2: "Regular employees" |
@@ -189,7 +189,7 @@ header rows of the source:
 | 項目名 (code part) | `industry_code` | column name in `frame2024_t4-1a.csv` / `frame2024_t4-1b.csv` |
 | 階層 | `industry_hierarchy` | 1 = aggregate, 2 = division, 3 = subdivision, 4 = major group, 5 = group, 6 = group used only in the economic census (letter in the 3rd digit) |
 | 産業大分類 | `industry_division` | division code |
-| 項目名 (name part) | `industry_name` | docs/frame2024_classification.pdf |
+| 項目名 (name part) | `industry_name` | docs/official/frame2024_classification.pdf |
 
 The 2021 and 2024 industry codes follow different revisions of the Japan Standard Industrial
 Classification (Rev. 13 and Rev. 14), so the same code does not always mean the same industry.
