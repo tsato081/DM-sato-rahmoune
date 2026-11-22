@@ -1,4 +1,4 @@
-# Codebook
+# Translation
 
 This document describes the CSV files in `data/csv/`, how each Japanese label in the raw
 files was translated, and the official source of each translation.

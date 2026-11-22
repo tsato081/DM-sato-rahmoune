@@ -1,0 +1,12 @@
+# Rendered outputs
+*.html
+*_files/
+
+# RStudio / R temporary files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# macOS
+.DS_Store

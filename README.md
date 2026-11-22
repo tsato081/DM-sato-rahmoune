@@ -41,7 +41,7 @@ The Excel files are published in Japanese only. Each file can be re-downloaded w
 
 - Translates headers and identifier labels into English and drops Japanese area names.
 - `frame2024_industries.csv` maps the industry column codes in `frame2024_t4-1a.csv` / `t4-1b.csv` to their English names.
-- Full column definitions and translation sources: [`docs/codebook.md`](docs/codebook.md).
+- Full column definitions and translation sources: [`docs/translation.md`](docs/translation.md).
 
 ### Methodology documents
 
@@ -77,4 +77,4 @@ commit regularly with each commit representing one logical change
 
 ## AI Usage
 - The raw data files in `data/raw/` and the methodology documents in `docs/official/` were retrieved from e-Stat and the Statistics Bureau of Japan website using Claude in Chrome.
-- Because the downloaded e-Stat Excel files are in Japanese only, AI was used to write `Script/translate.R`, extract `data/csv/frame2024_industries.csv`, and draft `docs/codebook.md` using the official English classifications and glossaries in `docs/official/` (`ecensus2021_classification.xlsx`, `frame2024_classification.pdf`, `*_terms.pdf`). Only headers and labels were translated.
+- Because the downloaded e-Stat Excel files are in Japanese only, AI was used to write `Script/translate.R`, extract `data/csv/frame2024_industries.csv`, and draft `docs/translation.md` using the official English classifications and glossaries in `docs/official/` (`ecensus2021_classification.xlsx`, `frame2024_classification.pdf`, `*_terms.pdf`). Only headers and labels were translated.

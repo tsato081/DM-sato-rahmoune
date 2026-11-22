@@ -9,7 +9,7 @@
 #   3. Drops Japanese area names (keeps the standard area codes only).
 #
 # Values (including "-" for missing/empty cells) are NOT modified or converted.
-# See docs/codebook.md for the mapping of all column names and labels.
+# See docs/translation.md for the mapping of all column names and labels.
 
 suppressPackageStartupMessages({
   library(readxl)
