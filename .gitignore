@@ -1,6 +1,7 @@
 # Rendered outputs
 *.html
 *_files/
+*.zip
 
 # RStudio / R temporary files
 .Rproj.user/
