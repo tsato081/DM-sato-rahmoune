@@ -87,7 +87,6 @@ Second, the Economic Census provides a universal mapping of all economic and bus
 
 **regular_employees**: Number of permanent, full-time workers, indicating job stability in each sector.
 
-
 ## Data Loading & Basic information
 
 ```{r}
@@ -109,7 +108,7 @@ census2020_t27 |>
         unique_areas = n_distinct(area_code),
         missing_cells = sum(is.na(census2020_t27))
     )
-names(census2020_t27)
+head(census2020_t27, 5)
 ```
 
 ```{r basic info2}
@@ -120,7 +119,7 @@ census2020_t28 |>
         unique_areas = n_distinct(area_code),
         missing_cells = sum(is.na(census2020_t28))
     )
-names(census2020_t28)
+head(census2020_t28, 5)
 ```
 
 ```{r basic info3}
@@ -131,10 +130,13 @@ ecensus2021 |>
         unique_areas = n_distinct(area_code),
         missing_cells = sum(is.na(ecensus2021))
     )
-names(ecensus2021)
+head(ecensus2021, 5)
 ```
 
 ## Data cleaning & joining
+
+We filter all three datasets to non-overlapping area types (`designated_city`, `city`, `town_village`) and total population (`nationality == "total"`, `sex == "total"`), extract all industries (`AR`), Medical/Welfare (`P`), and Manufacturing (`E`) from the Census, and join them by `area_code`. Missing count values (`pop_did` for areas without a DID, and `-` in e-Stat) are replaced with `0` before computing `did_share`.
+
 ```{r}
 area_types <- c("designated_city", "city", "town_village")
 # Keep only non-overlapping municipalities.
@@ -177,7 +179,6 @@ econ_manuf <- econ_area |>
                 emp_manuf = persons_engaged)
 ```
 
-
 ```{r}
 area_data <- pop_2020 |>
     left_join(did_2020, by = "area_code") |>
@@ -191,4 +192,15 @@ area_data <- pop_2020 |>
         did_share = 100 * pop_did / pop_total
     )
 head(area_data, 5)
+```
+
+```{r}
+#graphical representation, one area had population of 0 at the census because of evacuation.
+ggplot(area_data, aes(x = ratio_65plus)) +
+    geom_histogram(binwidth = 2, color = "white", na.rm=TRUE) + labs(
+        title = "Dist. of the 65+ population shares across areas",
+        x = "population aged 65+ (in %)",
+        y = "Number of areas"
+    ) +
+    theme_minimal()
 ```
