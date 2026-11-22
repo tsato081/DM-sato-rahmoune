@@ -4,7 +4,7 @@ author: "Maria Rahmoune, Teru Sato"
 format: html
 ---
 
-# Github link: <https://github.com/tsato081/DM-sato-rahmoune.git>
+### Github link: <https://github.com/tsato081/DM-sato-rahmoune.git>
 
 ```{r}
 #| label: here configuration
@@ -41,5 +41,24 @@ Second, the Economic Census provides a universal mapping of all economic and bus
 We rely on:
 The 2021 Economic Census for Business Activity (Table 6-1): Conducted in June 2021, this survey provides municipality-level statistics on the number of privately owned business establishments and total persons engaged (broken down by gender, regular employees, and dispatched workers) across major divisions of the Japan Standard Industrial Classification (JSIC Rev. 13).
 
+## Main variables description
+**area_type**: Administrative status (city, town_village, designated_city, ward) used to classify jurisdictions as urban or rural
 
-## Variables description 
+**pop_total in DID (table 2-8)**: Residents living in Densely Inhabited Districts,divided by total population, it computes the official municipal urbanization rate.
+
+**ratio_65plus**: Percentage of residents aged 65 and older, measuring the intensity of local population aging.
+
+**pop_total (table2-7)**: Total enumerated population, used to scale and control for municipality size.
+
+**ratio_15_64**: Share of the working-age population (15–64 years old), measuring the available local labor supply.
+
+**average_age/median_age**: Summary indicators capturing the overall age profile of each municipality.
+
+**industry_name/industry_division**: Industrial sector under JSIC (e.g., Medical/Welfare, Retail,Manufacturing), used to track local sectoral shifts.
+
+**establishments**: Number of active, privately owned business establishments operating within the municipality.
+
+**persons_engaged**: Total workforce employed in each local industry, reflecting sectoral labor demand.
+
+**regular_employees**: Number of permanent, full-time workers, indicating job stability in each sector.
+
