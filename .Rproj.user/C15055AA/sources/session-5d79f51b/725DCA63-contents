@@ -1,0 +1,125 @@
+---
+title: "Ggplot lab"
+author: "Maria Rahmoune"
+format:
+  html:
+    default
+  typst:
+    echo: false
+---
+
+```{r}
+#| label: here configuration
+#| message: false
+## use the standard here configuration
+here::i_am('ggplot_lab.Rproj')
+```
+
+```{r}
+#| label: libraries
+#| message: false
+library(ggplot2)
+theme_set(theme_bw())
+```
+
+## AI Use Disclosure Statement
+
+Write here you statement.
+
+#Question 1 \## Data Loading
+
+To load a `.rds` file, you have to use a code of the form `x <- readRDS("blabla.Rds")`.
+
+::: panel-tabset
+#### R
+
+```{r}
+## load the data in this block
+dataset <- readRDS("dataset.Rds")
+```
+
+#### Prompt
+
+Write here the prompt you used for the corresponding R block.
+:::
+
+## Question 2
+
+|                        |                     |
+|------------------------|---------------------|
+| Number of observations | `{r} nrow(dataset)` |
+| Number of variables    | `{r} ncol(dataset)` |
+
+: Basic data characteristics
+
+##Question 3 
+```{r}
+ggplot(dataset, aes(x=`Time to conversion`) ) + 
+  geom_histogram(bins = 30)
+#interpretation : the distribution is right skewed (positively skewed), meaning that most observations cluster around small values and only a few observations have high values 
+```
+
+
+#Question 4
+
+```{r}
+ggplot(dataset, aes(x=`Subscription status`)) + 
+  geom_bar() #discrete variable --> finite values, we count how many there are 
+#20% are active subscriptions and 80% are inactive subscriptions 
+```
+
+##BIVARIATE ANALYSIS 
+#Question 5 
+```{r}
+ggplot(dataset, aes(x=`Response rate`, y=`Time to conversion`)) +
+  geom_point(alpha=0.5)  
+  #coord_flip() #show the reponse rate as a function of time to conversion 
+
+```
+```{r}
+ggplot(dataset, aes(x=`Response rate`, y=`Time to conversion`)) +
+  geom_bin_2d(bins=10) + 
+  scale_fill_viridis_c(direction = -1)
+  #coord_flip() #show the reponse rate as a function of time to conversion 
+# dependency is concentrated around 0 which suggests a long tail distribution
+```
+
+```{r}
+ggplot(dataset, aes(x=`Time to conversion`)) + 
+  geom_histogram(bins=30)
+```
+
+#Question 6
+```{r}
+ggplot(dataset, aes(x=`Device type`, fill=`Subscription status`))+
+  geom_bar(position="fill")
+#interpretation: 
+```
+
+##question 7 
+```{r}
+ggplot(dataset, aes(x=`Campaign theme`))+
+  geom_bar() +
+  facet_wrap(~cut_number(`Time to conversion`,4),nrow=1)
+```
+
+##question 7 
+```{r}
+#Use at least two different graphical representations to assess 
+#whether Time to conversion depends on Campaign theme and comment the results,
+#especially by comparing the two solutions.
+#version 1 : boxplot 
+ggplot(dataset, aes(x=`Campaign theme`, y= `Time to conversion`, fill=`Campaign theme`))+
+  geom_boxplot() + 
+  theme_minimal()+
+  theme(legend.position = "none")
+```
+```{r}
+#overlapping densities 
+ggplot(dataset, aes(x=`Time to conversion`, fill=`Campaign theme`))+
+  geom_density(alpha=0.4)+
+  theme_minimal()
+```
+
+
+

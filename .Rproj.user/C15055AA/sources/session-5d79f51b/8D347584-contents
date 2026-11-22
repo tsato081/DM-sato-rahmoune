@@ -1,0 +1,31 @@
+---
+title: "Population ageing in Japan"
+author: "Maria Rahmoune, Teru Sato" 
+format: html
+---
+
+# Github link: <https://github.com/tsato081/DM-sato-rahmoune.git>
+
+```{r}
+#| label: here configuration
+#| message: false
+here::i_am('DM-sato-rahmoune.Rproj')
+```
+
+## Research question
+Japan is facing one of the most pronounced demographic ageing processes in the world. In 2025, approximately 29.4% of its population was aged 65 or above, representing around 36 million people (World Bank). This proportion is expected to rise to 37.1% by 2050 (IPSS). Alongside a declining total population, these trends raise important questions about the ability of local economies to adapt to changing demographic conditions.
+
+Our research aims to understand whether population ageing primarily leads to a reorganisation of local economies, with certain sectors gaining importance while others decline, or whether it results in a broader contraction of local businesses and employment.
+
+The underlying idea is that ageing can generate two potentially opposing effects. On the demand side, an increasing proportion of elderly residents may create greater demand for healthcare, social welfare and other age-related services, encouraging the expansion of these sectors. On the supply side, however, a shrinking working-age population may reduce labour availability, constrain business activity and weaken the overall economic dynamism of local communities. We therefore want to investigate whether certain sectors can expand as overall economic activity declines.
+
+More specifically, we will examine whether municipalities with higher proportions of elderly residents have a greater concentration of economic activity in healthcare and social welfare, potentially accompanied by a decline in other sectors such as manufacturing. We will also investigate whether ageing is associated with lower business density and employment intensity.
+
+Furthermore, we will explore whether these relationships differ between urban and rural municipalities. Rural areas may be particularly vulnerable due to smaller local markets, more pronounced demographic decline and less diversified economic structures. Urban municipalities, on the other hand, may have greater economic diversification and a stronger capacity to accommodate changing demographic needs.
+
+To investigate these relationships, we will combine data from Japan's Population Census (2020) and Economic Census (2021), using municipalities as our unit of observation. We will construct demographic indicators, particularly the proportion of residents aged 65 and above and the share of working-age residents. Using the Economic Census, we will examine business density, employment intensity and the distribution of establishments and employment across different industries. Finally, we will distinguish between urban and rural municipalities to compare the relationship between population ageing and local economic structures across territories.
+
+
+## Data sources and description 
+
+## Variables description 

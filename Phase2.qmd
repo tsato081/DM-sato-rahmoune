@@ -25,7 +25,21 @@ Furthermore, we will explore whether these relationships differ between urban an
 
 To investigate these relationships, we will combine data from Japan's Population Census (2020) and Economic Census (2021), using municipalities as our unit of observation. We will construct demographic indicators, particularly the proportion of residents aged 65 and above and the share of working-age residents. Using the Economic Census, we will examine business density, employment intensity and the distribution of establishments and employment across different industries. Finally, we will distinguish between urban and rural municipalities to compare the relationship between population ageing and local economic structures across territories.
 
+## Data sources
 
-## Data sources and description 
+## Data description 
+The data used in this project originates from the Statistics Bureau of the Ministry of Internal Affairs and Communications of Japan (SBJ), accessed via e-Stat (the official portal site for Japanese government statistics). The datasets come from two major nationwide surveys conducted under the Japanese Statistics Act: the Population Census (Kokusei Chosa) and the Economic Census.
+
+First, the Population Census is Japan's most fundamental statistical survey, conducted every five years since 1920. It provides a complete enumeration (universal coverage) of all persons residing in Japan at the time of the survey, regardless of nationality. Because participation is mandatory by law, the census has exceptionally high response rates and virtually eliminates sampling bias, making it the benchmark for all demographic research in Japan.
+
+For our study, we retrieve municipality-level data from the 2020 Population Census (and baseline comparisons from the 2025 census cycle):
+Table 2-7 (Age Composition): Disaggregates local populations by sex, 5-year age cohorts, broad functional age groups (0–14, 15–64, and 65+), and provides calculated average and median ages for each municipality. This allows us to quantify the degree of population aging (ratio_65plus).
+
+Table 2-8 (Densely Inhabited Districts or DIDs): Measures the population living in designated urban clusters (areas with a population density of 4,000+ inhabitants per square kilometer within a municipality of at least 5,000 inhabitants). Comparing DID population to total municipal population provides the official Japanese measure of local urbanization.
+
+Second, the Economic Census provides a universal mapping of all economic and business activities in Japan across all industries (excluding subsistence agriculture and public administration).
+We rely on:
+The 2021 Economic Census for Business Activity (Table 6-1): Conducted in June 2021, this survey provides municipality-level statistics on the number of privately owned business establishments and total persons engaged (broken down by gender, regular employees, and dispatched workers) across major divisions of the Japan Standard Industrial Classification (JSIC Rev. 13).
+
 
 ## Variables description 
