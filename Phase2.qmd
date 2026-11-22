@@ -1,7 +1,9 @@
 ---
 title: "Population ageing in Japan"
 author: "Maria Rahmoune, Teru Sato" 
-format: html
+format: 
+    html:
+        df-print: kable
 ---
 
 ### Github link: <https://github.com/tsato081/DM-sato-rahmoune.git>
@@ -9,10 +11,16 @@ format: html
 ```{r}
 #| label: here configuration
 #| message: false
+#| warning: false
+library(here)
+library(readr)
+library(dplyr)
+library(ggplot2)
 here::i_am('DM-sato-rahmoune.Rproj')
 ```
 
 ## Research question
+
 Japan is facing one of the most pronounced demographic ageing processes in the world. In 2025, approximately 29.4% of its population was aged 65 or above, representing around 36 million people (World Bank). This proportion is expected to rise to 37.1% by 2050 (IPSS). Alongside a declining total population, these trends raise important questions about the ability of local economies to adapt to changing demographic conditions.
 
 Our research aims to understand whether population ageing primarily leads to a reorganisation of local economies, with certain sectors gaining importance while others decline, or whether it results in a broader contraction of local businesses and employment.
@@ -27,21 +35,38 @@ To investigate these relationships, we will combine data from Japan's Population
 
 ## Data sources
 
-## Data description 
+All datasets come from the Statistics Bureau of Japan (Ministry of Internal Affairs and Communications) via [e-Stat](https://www.e-stat.go.jp/en).
+
+| CSV file (`data/csv/`) | Survey (reference date) | Table | e-Stat source |
+|------------------|------------------|------------------|------------------|
+| `census2020_t2-7.csv` | 2020 Population Census (Oct 1, 2020) | Table 2-7: Population by sex and age (5-year & 3 groups), composition ratio, average/median age | [List](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200521&tstat=000001136464&cycle=0&tclass1=000001136466&tclass2val=0) / [Download](https://www.e-stat.go.jp/stat-search/file-download?statInfId=000032142410&fileKind=0) (`000032142410`) |
+| `census2020_t2-8.csv` | 2020 Population Census (Oct 1, 2020) | Table 2-8: Same as 2-7, Densely Inhabited Districts (DIDs) | [List](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200521&tstat=000001136464&cycle=0&tclass1=000001136466&tclass2val=0) / [Download](https://www.e-stat.go.jp/stat-search/file-download?statInfId=000032142411&fileKind=0) (`000032142411`) |
+| `ecensus2021_t6-1.csv` | 2021 Economic Census for Business Activity (Jun 1, 2021; JSIC Rev. 13) | Table 6-1: Privately owned establishments and persons engaged by industry major groups | [List](https://www.e-stat.go.jp/en/stat-search/files?page=1&layout=datalist&toukei=00200553&tstat=000001145590&cycle=0&tclass1=000001145649&tclass2=000001145667&tclass3=000001145670&tclass4val=0) / [Download](https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040067880&fileKind=0) (`000040067880`) |
+
+**Reproducing the CSV files:**
+
+1.  Download the raw Excel files from the direct e-Stat links above into `data/raw/`.
+2.  Since the raw e-Stat Excel files are published in Japanese only, run `Rscript Script/translate.R` to translate the headers and identifier labels into English CSVs in `data/csv/` using the official Statistics Bureau of Japan glossaries and classifications in `docs/official/` (mapping is documented in `docs/translation.md`).
+
+Official English documentation (`docs/official/`):
+
+- **2020 Population Census:** [Outline](https://www.stat.go.jp/english/data/kokusei/2020/pdf/outline.pdf), [Explanation of Terms](https://www.stat.go.jp/english/data/kokusei/2020/pdf/exp.pdf)
+- **2021 Economic Census for Business Activity:** [Outline](https://www.stat.go.jp/english/data/e-census/2021/pdf/k_gaikyoe.pdf), [Explanation of Terms](https://www.stat.go.jp/english/data/e-census/2021/pdf/k_term.pdf), [Notes on Tables](https://www.stat.go.jp/english/data/e-census/2021/pdf/k_note.pdf), [Industrial Classification (JSIC Rev. 13)](https://www.stat.go.jp/english/data/e-census/2021/zuhyou/r3classification.xlsx)
+
+## Data description
+
 The data used in this project originates from the Statistics Bureau of the Ministry of Internal Affairs and Communications of Japan (SBJ), accessed via e-Stat (the official portal site for Japanese government statistics). The datasets come from two major nationwide surveys conducted under the Japanese Statistics Act: the Population Census (Kokusei Chosa) and the Economic Census.
 
 First, the Population Census is Japan's most fundamental statistical survey, conducted every five years since 1920. It provides a complete enumeration (universal coverage) of all persons residing in Japan at the time of the survey, regardless of nationality. Because participation is mandatory by law, the census has exceptionally high response rates and virtually eliminates sampling bias, making it the benchmark for all demographic research in Japan.
 
-For our study, we retrieve municipality-level data from the 2020 Population Census (and baseline comparisons from the 2025 census cycle):
-Table 2-7 (Age Composition): Disaggregates local populations by sex, 5-year age cohorts, broad functional age groups (0–14, 15–64, and 65+), and provides calculated average and median ages for each municipality. This allows us to quantify the degree of population aging (ratio_65plus).
+For our study, we retrieve municipality-level data from the 2020 Population Census (and baseline comparisons from the 2025 census cycle): Table 2-7 (Age Composition): Disaggregates local populations by sex, 5-year age cohorts, broad functional age groups (0–14, 15–64, and 65+), and provides calculated average and median ages for each municipality. This allows us to quantify the degree of population aging (ratio_65plus).
 
 Table 2-8 (Densely Inhabited Districts or DIDs): Measures the population living in designated urban clusters (areas with a population density of 4,000+ inhabitants per square kilometer within a municipality of at least 5,000 inhabitants). Comparing DID population to total municipal population provides the official Japanese measure of local urbanization.
 
-Second, the Economic Census provides a universal mapping of all economic and business activities in Japan across all industries (excluding subsistence agriculture and public administration).
-We rely on:
-The 2021 Economic Census for Business Activity (Table 6-1): Conducted in June 2021, this survey provides municipality-level statistics on the number of privately owned business establishments and total persons engaged (broken down by gender, regular employees, and dispatched workers) across major divisions of the Japan Standard Industrial Classification (JSIC Rev. 13).
+Second, the Economic Census provides a universal mapping of all economic and business activities in Japan across all industries (excluding subsistence agriculture and public administration). We rely on: The 2021 Economic Census for Business Activity (Table 6-1): Conducted in June 2021, this survey provides municipality-level statistics on the number of privately owned business establishments and total persons engaged (broken down by gender, regular employees, and dispatched workers) across major divisions of the Japan Standard Industrial Classification (JSIC Rev. 13).
 
 ## Main variables description
+
 **area_type**: Administrative status (city, town_village, designated_city, ward) used to classify jurisdictions as urban or rural
 
 **pop_total in DID (table 2-8)**: Residents living in Densely Inhabited Districts,divided by total population, it computes the official municipal urbanization rate.
@@ -62,3 +87,108 @@ The 2021 Economic Census for Business Activity (Table 6-1): Conducted in June 20
 
 **regular_employees**: Number of permanent, full-time workers, indicating job stability in each sector.
 
+
+## Data Loading & Basic information
+
+```{r}
+#| label: load-data
+#| message: false
+census2020_t27 <- read_csv(here("data", "csv", "census2020_t2-7.csv"),
+                            na = "-", show_col_types = FALSE)
+census2020_t28 <- read_csv(here("data", "csv", "census2020_t2-8.csv"),
+                            na = "-", show_col_types = FALSE)
+ecensus2021 <- read_csv(here("data", "csv", "ecensus2021_t6-1.csv"),
+                            na = "-", show_col_types = FALSE)
+```
+
+```{r basic info1}
+census2020_t27 |>
+    summarise(
+        rows=n(),
+        cols=ncol(census2020_t27),
+        unique_areas = n_distinct(area_code),
+        missing_cells = sum(is.na(census2020_t27))
+    )
+names(census2020_t27)
+```
+
+```{r basic info2}
+census2020_t28 |>
+    summarise(
+        rows=n(),
+        cols=ncol(census2020_t28),
+        unique_areas = n_distinct(area_code),
+        missing_cells = sum(is.na(census2020_t28))
+    )
+names(census2020_t28)
+```
+
+```{r basic info3}
+ecensus2021 |>
+    summarise(
+        rows=n(),
+        cols=ncol(ecensus2021),
+        unique_areas = n_distinct(area_code),
+        missing_cells = sum(is.na(ecensus2021))
+    )
+names(ecensus2021)
+```
+
+## Data cleaning & joining
+```{r}
+area_types <- c("designated_city", "city", "town_village")
+# Keep only non-overlapping municipalities.
+# exclude national/prefecture totals, wards which are subsets of designated cities, and historical 2000 municipalities
+pop_2020 <- census2020_t27 |>
+    filter(
+        nationality == "total",
+        sex == "total",
+        area_type %in% area_types
+    ) |>
+    select(area_code, pref_code, area_type, pop_total, ratio_65plus, ratio_15_64,
+            average_age, median_age)
+
+did_2020 <- census2020_t28 |>
+    filter(
+        nationality == "total",
+        sex == "total",
+        area_type %in% area_types
+    ) |>
+    select(area_code, pop_did = pop_total)
+```
+
+```{r}
+econ_area <- ecensus2021 |>
+    filter(area_type %in% area_types)
+
+econ_total <- econ_area |>
+      filter(industry_code == "AR") |>
+      select(area_code, estab_total = establishments, 
+                emp_total = persons_engaged)
+
+econ_health <- econ_area |>
+      filter(industry_code == "P") |>
+      select(area_code, estab_health = establishments, 
+                emp_health = persons_engaged)
+
+econ_manuf <- econ_area |>
+      filter(industry_code == "E") |>
+      select(area_code, estab_manuf = establishments, 
+                emp_manuf = persons_engaged)
+```
+
+
+```{r}
+area_data <- pop_2020 |>
+    left_join(did_2020, by = "area_code") |>
+    left_join(econ_total, by = "area_code") |>
+    left_join(econ_health, by = "area_code") |>
+    left_join(econ_manuf, by = "area_code") |>
+    mutate(
+        pop_did = if_else(is.na(pop_did), 0, pop_did),
+        emp_health = if_else(is.na(emp_health), 0, emp_health),
+        emp_manuf = if_else(is.na(emp_manuf), 0, emp_manuf),
+        did_share = 100 * pop_did / pop_total
+    )
+head(area_data, 5)
+```
